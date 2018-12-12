@@ -116,6 +116,7 @@ public class MainActivity extends AppCompatActivity
     private static final String MESSAGE_URL = "http://friendlychat.firebase.google.com/message/";
 
     private Button mSendButton;
+    private Button menuButton;
     private RecyclerView mMessageRecyclerView;
     private LinearLayoutManager mLinearLayoutManager;
     private ProgressBar mProgressBar;
@@ -308,6 +309,15 @@ public class MainActivity extends AppCompatActivity
                 intent.addCategory(Intent.CATEGORY_OPENABLE);
                 intent.setType("image/*");
                 startActivityForResult(intent, REQUEST_IMAGE);
+            }
+        });
+
+        menuButton=(Button)findViewById(R.id.menuButton);
+
+        menuButton.setOnClickListener(new View.OnClickListener(){
+            public  void  onClick(View view) {
+                Intent intent2 = new Intent(MainActivity.this,menu.class);
+                startActivity(intent2);
             }
         });
     }

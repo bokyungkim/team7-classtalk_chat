@@ -14,14 +14,26 @@
  * limitations under the License.
  */
 package com.google.firebase.codelab.friendlychat;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class FriendlyMessage {
+    Button button1;
+
 
     private String id;
     private String text;
     private String name;
     private String photoUrl;
     private String imageUrl;
+
+
+
+
 
     public FriendlyMessage() {
     }
